@@ -1,0 +1,109 @@
+{% load static%}
+{% csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+</head>
+<style>
+    body {
+        background-image: url("{% static '/bg.jpg'%}");
+        background-size: cover;
+        background-attachment: fixed;
+        text-align: center;
+        /* align-items: center; */
+        /* margin: auto; */
+
+    }
+
+    .login-div {
+        width: 430px;
+        height: 700px;
+        margin: auto;
+        padding: 60px 35px 35px 35px;
+        border-radius: 40px;
+        background: #ecf0f3;
+        box-shadow: 13px 13px 20px #cbced1,
+            -13px -13px 20px #ffffff;
+    }
+    /* .tab {
+  width: 100%;
+  padding: 75px 5px 5px 5px;
+} */
+ input {
+  border: none;
+  font-family :Arial, Helvetica, sans-serif;
+  margin: 5px 20px 20px;
+  border-radius: 25px;
+  box-shadow: inset 8px 8px 8px #cbced1,
+              inset -8px -8px 8px #ffffff;
+  outline:none;
+  background: none;
+  font-size: 12px;
+  color: #555;
+  padding: 10px 15px;
+}
+.submit-btn:hover {
+padding:10px;
+ background-color:rgb(81, 253, 1);
+}
+</style>
+
+<body>
+    <div align="center" class="main login-div">
+        <h1 >Predict Your Diabetes</h1>
+        <form action="result" method="post">
+            <table>
+                <tr>
+                    <td align="right">Pregnancies:</td>
+                    <td align="left"><input type="number"  min="0" name="n1" required /></td>
+
+                </tr>
+                <tr>
+                    <td align="right">Glucose:</td>
+                    <td align="left"><input type="number" step="any" min="0" name="n2" required /></td>
+
+                </tr>
+                <tr>
+                    <td align="right">Blood Pressure:</td>
+                    <td align="left"><input type="number" min="0" step="any" name="n3" required /></td>
+
+                </tr>
+                <tr>
+                    <td align="right">Skin Thickness:</td>
+                    <td align="left"><input type="number"  min="0"  step="any" name="n4" required /></td>
+
+                </tr>
+                <tr>
+                    <td align="right">Insulin:</td>
+                    <td align="left"><input type="number" min="0"  step="any" name="n5" required /></td>
+
+                </tr>
+                <tr>
+                    <td align="right">BMI:</td>
+                    <td align="left"><input type="number" step=any  min="0" name="n6" required /></td>
+
+                </tr>
+                <tr>
+                    <td align="right">Diabetes Pedigree Function:</td>
+                    <td align="left"><input type="number" step=any  min="0" name="n7" required /></td>
+
+                </tr>
+                <tr>
+                    <td align="right">Age:</td>
+                    <td align="left"><input type="number" min="0" name="n8" required /></td>
+
+                </tr>
+            </table>
+            <br>
+            <input type="submit" class = "submit-btn" value="Get Result">
+        </form>
+
+    </div>
+</body>
+
+</html>

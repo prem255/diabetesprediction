@@ -1,0 +1,332 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+</head>
+</head>
+<style>
+    body {
+        background-color: rgb(226, 226, 226);
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    th,
+    td {
+        text-align: left;
+        padding: 8px;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+        background-color: #c9bdbd;
+    }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+    crossorigin="anonymous"></script>
+
+<body>
+    <div class="container p-5">
+        <div>
+            <h1> Overview</h1>
+            <p>
+
+                In this article, we will be predicting that whether the patient has diabetes or not on the basis of the
+                features we will provide to our machine learning model, and for that, we will be using the famous Pima
+                Indians Diabetes Database.
+            </p>
+
+            <ol>
+                <li>Data analysis: Here one will get to know about how the data analysis part is done in a data science
+                    life cycle.</li>
+                <li>Exploratory data analysis: EDA is one of the most important steps in the data science project life
+                    cycle and here one will need to know that how to make inferences from the visualizations and data
+                    analysis</li>
+                <li>Model building: Here we will be using 4 ML models and then we will choose the best performing model.
+                </li>
+                <li>Saving model: Saving the best model using pickle to make the prediction from real data.</li>
+            </ol>
+            <div class="m-4">
+                <a class="btn btn-primary p-2" target="_blank"
+                    href="https://www.researchgate.net/publication/347091823_Diabetes_Prediction_Using_Machine_Learning">Research
+                    Paper1</a>
+                </button>
+                <a class="btn btn-primary p-2" target="_blank"
+                    href="https://www.sciencedirect.com/science/article/pii/S1877050920300557">Research Paper2</a>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Sl.no</th>
+                    <th>ML Algorithm</th>
+                    <th>Accuracy</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>Random Forest Classifier</td>
+                    <td>100.000</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>XG Boost Classifier</td>
+                    <td>100.00000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Naive Bayes Classifier</td>
+                    <td>78.15562</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Decision Tree Classifier</td>
+                    <td>100.00000</td>
+                </tr>
+            </table>
+
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pregnancies</th>
+                        <th>Glucose</th>
+                        <th>BloodPressure</th>
+                        <th>SkinThickness</th>
+                        <th>Insulin</th>
+                        <th>BMI</th>
+                        <th>DiabetesPedigreeFunction</th>
+                        <th>Age</th>
+                        <th>Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2</td>
+                        <td>134</td>
+                        <td>70</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>28.9</td>
+                        <td>0.542</td>
+                        <td>23</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>91</td>
+                        <td>68</td>
+                        <td>32</td>
+                        <td>210</td>
+                        <td>39.9</td>
+                        <td>0.381</td>
+                        <td>25</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>119</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>19.6</td>
+                        <td>0.832</td>
+                        <td>72</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>100</td>
+                        <td>54</td>
+                        <td>28</td>
+                        <td>105</td>
+                        <td>37.8</td>
+                        <td>0.498</td>
+                        <td>24</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>175</td>
+                        <td>62</td>
+                        <td>30</td>
+                        <td>0</td>
+                        <td>33.6</td>
+                        <td>0.212</td>
+                        <td>38</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="m-4">
+            <a class="btn btn-primary p-2" href="http://127.0.0.1:8000/">Predict Your Diabetes</a>
+            </button>
+        </div>
+        <pre class="py-5 my-5" style="background-color: black;"><code style="color:white">
+            #Importing Required Libraries
+            import numpy as np
+            import pandas as pd
+            from sklearn import preprocessing
+            from sklearn.model_selection import train_test_split
+            from sklearn.ensemble import RandomForestClassifier
+            import xgboost as xgb
+            from xgboost import XGBClassifier
+            from sklearn.naive_bayes import GaussianNB
+            from sklearn.tree import DecisionTreeClassifier
+            from sklearn.metrics import accuracy_score
+            # Load the diabetes dataset
+            data=pd.read_csv(r"/home/prem/Desktop/pythonpersonal/my_project/diabetes.csv")
+            
+            data.head()
+            data.info()
+            data.isnull().sum()
+           
+            a=data['Outcome'].value_counts()[0]
+            b=data['Outcome'].value_counts()[1]
+            # print("Percentage of non-diabetic patient",(a/(a+b))*100)
+            # print("Percentage of diabetic patient",(b/(a+b))*100)
+            
+            data['Pregnancies']=data['Pregnancies'].clip(upper=data['Pregnancies'].quantile(0.77))
+            data['Age']=data['Age'].clip(upper=data['Age'].quantile(0.76))
+            data['Glucose']=data['Glucose'].clip(lower=data['Glucose'].quantile(0.20))
+            data['BloodPressure']=data['BloodPressure'].clip(lower=data['BloodPressure'].quantile(0.24),upper=data['BloodPressure'].quantile(0.76))
+            data['SkinThickness']=data['SkinThickness'].clip(upper=data['SkinThickness'].quantile(0.80))
+            data['Insulin']=data['Insulin'].clip(upper=data['Insulin'].quantile(0.75))
+            data['BMI']=data['BMI'].clip(lower=data['BMI'].quantile(0.23),upper=data['BMI'].quantile(0.77))
+            data['DiabetesPedigreeFunction']=data['DiabetesPedigreeFunction'].clip(upper=data['DiabetesPedigreeFunction'].quantile(0.75))
+            corr=data.corr()
+            data.groupby('Outcome').hist(figsize=(14, 13))
+            
+            label_encoder = preprocessing.LabelEncoder()
+            data['Pregnancies']=label_encoder.fit_transform(data['Pregnancies'])
+            data['Age']= label_encoder.fit_transform(data['Age'])
+            data['Glucose']= label_encoder.fit_transform(data['Glucose'])
+            data['BloodPressure']= label_encoder.fit_transform(data['BloodPressure'])
+            data['SkinThickness']= label_encoder.fit_transform(data['SkinThickness'])
+            data['Insulin']= label_encoder.fit_transform(data['Insulin'])
+            data['BMI']= label_encoder.fit_transform(data['BMI'])
+            data['DiabetesPedigreeFunction']= label_encoder.fit_transform(data['DiabetesPedigreeFunction'])
+            
+            
+            outcome_count_0, outcome_count_1 = data['Outcome'].value_counts()
+            outcome_0 = data[data['Outcome'] == 0]
+            outcome_1 = data[data['Outcome'] == 1]
+
+            # Outcome of Number of Positive and Negative counts
+            print('Outcome 0:', outcome_0.shape)
+            print('Outcome 1:', outcome_1.shape)
+            
+            outcome_0_under = outcome_0.sample(outcome_count_1)
+            test_under = pd.concat([outcome_0_under, outcome_1], axis=0)
+            # print("Total Outcomes of 1 and 0:",test_under['Outcome'].value_counts())
+            test_under['Outcome'].value_counts().plot(kind='bar', title='count (target)')
+            
+            
+            outcome_1_over = outcome_1.sample(outcome_count_0, replace=True)
+            test_over = pd.concat([outcome_1_over, outcome_0], axis=0)
+            # print("total class of 1 and 0:",test_over['Outcome'].value_counts())
+            test_over['Outcome'].value_counts().plot(kind='bar', title='count (target)')
+            
+            X = data.drop('Outcome', axis=1)
+            y = data['Outcome']
+
+            # Split the data into training and testing sets
+            X_train, X_test, y_train, y_test = train_test_split(X,y, test_size=0.25,random_state=42)
+            
+            #Accuracy calculation of Build Random Forest
+
+            def build_random_forest(X_train, y_train, X_test, y_test):
+            rf = RandomForestClassifier(n_estimators=100, random_state=42)
+            rf.fit(X_train, y_train)
+            y_pred1 = rf.predict(X_test)
+            acc1 = accuracy_score(y_test, y_pred1)   
+            return acc1
+            acc1 = build_random_forest(X_train, y_train, X_test, y_test)
+            # print("Accuracy score: {:.5f}".format(acc1))
+            # acc1=acc1*100
+            # print(acc1)
+
+            #Accuracy calculation of XGBClassifier
+            def build_xgb_classifier(X_train, y_train, X_test,y_test):
+            xgb_clf = xgb.XGBClassifier()
+            xgb_clf.fit(X_train, y_train)
+            y_pred2 = xgb_clf.predict(X_test)
+            acc2 = accuracy_score(y_test, y_pred2)
+            return acc2
+            acc2 = build_xgb_classifier(X_train, y_train, X_test, y_test)
+            print("Accuracy score: {:.5f}".format(acc2))
+            acc2=acc2*100
+            print(acc2)
+
+            #Accuracy calculation of GaussianNB
+
+            def build_naive_bayes_classifier(X_train, y_train, X_test,y_test):
+            gnb = GaussianNB()
+            gnb.fit(X_train, y_train)
+            y_pred3 = gnb.predict(X_test)
+            acc3 = accuracy_score(y_test, y_pred3)
+            return acc3
+            acc3 = build_naive_bayes_classifier(X_train, y_train, X_test, y_test)
+            print("Accuracy score: {:.5f}".format(acc3))
+            acc3=acc3*100
+            print(acc3)
+
+            #Accuracy calculation of Random Forest Classifier
+            
+            def build_decision_tree_classifier(X_train, y_train, X_test, y_test):
+            dt = DecisionTreeClassifier(criterion='gini',max_depth=None, min_samples_split=2)
+            dt.fit(X_train, y_train)
+            y_pred4 = dt.predict(X_test)
+            acc4 = accuracy_score(y_test, y_pred4)
+            return acc4
+            acc4 = build_decision_tree_classifier(X_train, y_train, X_test, y_test)
+            print("Accuracy score: {:.5f}".format(acc4))
+            acc4=acc4*100
+            print(acc4)
+
+
+            algorithm_accuracy = {
+            'Random Forest Classifier': acc1,
+            'XG Boost Classifier': acc2,
+            'Naive Bayes Classifier': acc3,
+            'Decision Tree Classifier': acc4,
+            }
+
+            #Overall Algorithm Accuracy on dataset 
+            df = pd.DataFrame(list(algorithm_accuracy.items()), columns=['ML Algorithm', 'Accuracy'])
+            print(df)
+
+            def prediction_with_random_forest(new_data):
+            rf_model = RandomForestClassifier(n_estimators=100, random_state=42)
+            rf_model.fit(X_train, y_train)
+            new_pred = rf_model.predict(new_data)
+            return new_pred
+
+            # row = pd.DataFrame(np.array([[8,183,64,0,0,23.3,0.672,32]]), columns=X_train.columns)
+            # new_pred = prediction_with_random_forest(rf_model, row)
+            # print(new_pred)
+            </code></pre>
+
+
+    </div>
+
+</body>
+
+
+</html>

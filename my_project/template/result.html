@@ -1,0 +1,45 @@
+{% load static%}
+{% csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     body {
+        background-image: url("{% static '/bg.jpg'%}");
+        background-size: cover;
+        background-attachment: fixed;
+        text-align: center;
+        align-items: center;
+        /* margin: auto; */
+
+    }
+    
+    .login-div {
+        width: 330px;
+        height: 300px;
+        margin: auto;
+        padding: 60px 35px 35px 35px;
+        border-radius: 40px;
+        background: #dadada;
+        box-shadow: 13px 13px 20px #cbced1,
+            -13px -13px 20px #ffffff;
+    }
+</style>
+
+<body>
+    <div class="login-div">
+
+        <h1>{{result2}}</h1>
+        <a href="http://127.0.0.1:8000/">Search more Results</a>
+        <a href="http://127.0.0.1:8000/source">About Project</a>
+
+    </div>
+</body>
+
+</html>
